@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Todo List</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#A64343" />
+  <link rel="icon" href="img/icon-192.png" />
+</head>
+<body>
+  <h1>My Todo List</h1>
+  <div class="todo-app">
+    <div class="container">
+      <form id="todo-form">
+        <div class="input-wrapper">
+         <button type="button" id="toggle-all" class="input-icon" aria-label="Toggle all">
+          <svg width="27" height="27" viewBox="0 0 24 24">
+            <path d="M7 12l3 3 7-7" fill="none" stroke="#A9A9A9" stroke-width="1.7"/>
+          </svg>
+        </button>
+
+          <input
+            id="todo-input"
+            type="text"
+            placeholder="Ketik todo & tekan enter untuk menambahkan"
+            autocomplete="off"
+          />
+        </div>
+      </form>
+      <ul id="todo-list"></ul>
+      <div class="footer">
+        <div class="items-left" id="items-left">0 item lagi</div>
+        <div class="filters">
+          <button data-filter="all" class="active">Semua</button>
+          <button data-filter="active">Belum</button>
+          <button data-filter="completed">Sudah</button>
+        </div>
+        <button id="clear-completed">Hapus yang sudah</button>
+      </div>
+    </div>
+  </div>
+  <div id="confirm-modal" class="modal hidden">
+  <div class="modal-box">
+    <p id="confirm-message">Yakin?</p>
+    <div class="modal-actions">
+      <button id="confirm-yes">Ya</button>
+      <button id="confirm-no">Batal</button>
+    </div>
+  </div>
+</div>
+  <script src="script/script.js"></script>
+  <script src="script/sw.js"></script>
+</body>
+</html>
